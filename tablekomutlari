@@ -1,0 +1,38 @@
+use Magaza;
+
+create table `Saklama` (
+id int not null auto_increment primary key,
+saklama_turu varchar(20) not null);
+
+create table `Tur` (
+id int not null auto_increment primary key,
+tur varchar(20) not null);
+
+create table `Birim` (
+id int not null auto_increment primary key,
+birim varchar(20) not null);
+
+create table `Urun` (
+id int not null auto_increment primary key,
+tur_id int not null,
+saklama_id int not null,
+birim_id int not null,
+cins varchar(20) not null,
+alis_fiyati int ,
+kdv int);
+
+create table `Stok` (
+id int not null auto_increment primary key,
+urun_id int not null,
+adet int not null);
+
+create table `Satis` (
+id int not null auto_increment primary key,
+urun_id int not null,
+adet int not null,
+satis_fiyati int);
+
+show tables;
+
+
+ 
