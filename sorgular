@@ -1,0 +1,28 @@
+select * from Urun;
+
+select cins from Urun where id = 502;
+
+select * from Urun where kdv = 1 or alis_fiyati = 2 ; 
+
+select * from Urun order by alis_fiyati  ;
+
+select * from Urun;
+
+update Urun set alis_fiyati = 4 where alis_fiyati = 2;
+update Urun set kdv = 3 where kdv= 1;
+
+delete from Urun where id > 501;
+
+select * from Satis;
+
+select * from Satis where adet between 100 and 1000;
+
+select Min(adet) as Enkucukadet from Satis;
+
+select urun_id,satis_fiyati,adet from Satis where adet = (Select Min(adet) from Satis);
+
+
+
+
+
+ 
