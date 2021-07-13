@@ -1,0 +1,27 @@
+insert into Saklama (id,saklama_turu) values (null,'Raf'),(null,'Raf'),(null,'Buzdolabı'),(null,'Derin Dondurucu'),(null,'Raf');
+select * from Saklama;
+
+insert into Tur (id,tur) values (null,'Kırtasiye'),(null,'Temizlik'),(null,'Gıda'),(null,'Gıda'),(null,'Tekstil');
+select * from Tur;
+
+
+insert into Birim (id,birim) values (null,'Adet'),(null,'Adet'),(null,'Kilo'),(null,'Adet'),(null,'Metre');
+select * from Birim;
+
+insert into Urun (id,tur_id,saklama_id,birim_id,cins,alis_fiyati,kdv) values
+(500,1,1,5,'Tükenmez Kalem',2,1),(null,2,2,6,'Deterjan',5,2),(null,3,3,7,'Patates',7,1),(null,4,4,8,'Dondurma',3,1),
+(null,5,5,9,'Kumaş',10,3);
+
+select * from Urun;
+
+insert into Stok (id,urun_id,adet) values (null,500,1000),(null,501,500),(null,502,100),(null,503,3000),(null,504,500);
+
+select * from Stok;
+
+insert into Satis (id,urun_id,adet,satis_fiyati) values (null,500,300,5),(null,501,100,10),
+(null,502,30,13),(null,503,1000,6),(null,504,200,20);
+
+select * from Satis;
+
+
+
